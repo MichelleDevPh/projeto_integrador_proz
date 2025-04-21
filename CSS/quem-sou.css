@@ -1,3 +1,4 @@
+/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
@@ -5,34 +6,29 @@
 }
 
 :root {
-    /* Cores principais */
     --cor-primaria: #123d3d;
     --cor-secundaria: #000000;
     --cor-texto: #ffffff;
     --cor-destaque: rgba(10, 122, 48, 0.678);
     --cor-post: rgb(70, 92, 61);
-    
-    /* Tipografia padronizada */
     --fonte-principal: 'Arial', sans-serif;
     --tamanho-base: clamp(16px, 4vw, 18px);
     --tamanho-titulo: clamp(20px, 5vw, 24px);
     --tamanho-subtitulo: clamp(18px, 4.5vw, 22px);
     --tamanho-pequeno: clamp(14px, 3.5vw, 16px);
-    
-    /* Espaçamentos */
     --espacamento-pequeno: clamp(10px, 2vw, 15px);
     --espacamento-medio: clamp(15px, 3vw, 20px);
     --espacamento-grande: clamp(20px, 4vw, 30px);
 }
 
+/* Estilos do Corpo */
 body {
-    background: url("../assets/Imagem\ 6.jpg") no-repeat center center fixed;
+    background: url("../assets/Imagem\ 5.jpg") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     width: 100%;
     font-family: var(--fonte-principal);
     color: var(--cor-texto);
-    position: relative;
     padding-top: 70px;
     padding-bottom: 60px;
     overflow-x: hidden;
@@ -40,6 +36,7 @@ body {
     line-height: 1.6;
 }
 
+/* Estilos do Cabeçalho */
 header {
     position: fixed;
     top: 0;
@@ -73,9 +70,9 @@ nav a {
     text-decoration: none;
     color: var(--cor-texto);
     font-size: var(--tamanho-pequeno);
-    white-space: nowrap;
 }
 
+/* Estilos do Conteúdo */
 .conteudo {
     max-width: min(800px, 90%);
     margin: var(--espacamento-grande) auto;
@@ -99,17 +96,12 @@ nav a {
     text-align: center;
 }
 
-.metadados {
-    margin-bottom: var(--espacamento-medio);
-    opacity: 0.8;
-    font-size: var(--tamanho-pequeno);
-}
-
 .texto-postagem p {
     margin-bottom: var(--espacamento-pequeno);
     text-align: justify;
 }
 
+/* Estilos do Rodapé */
 .rodape {
     text-align: center;
     padding: var(--espacamento-pequeno);
@@ -124,27 +116,28 @@ nav a {
     font-size: var(--tamanho-pequeno);
 }
 
+/* Estilos Responsivos */
 @media (max-width: 600px) {
     body {
         padding-top: 100px;
         font-size: var(--tamanho-pequeno);
     }
-    
+
     header {
         flex-direction: column;
         padding: var(--espacamento-pequeno);
     }
-    
+
     .logo {
         max-width: 100%;
         margin-bottom: var(--espacamento-pequeno);
         text-align: center;
     }
-    
+
     nav ul {
         justify-content: center;
     }
-    
+
     .conteudo {
         margin-top: var(--espacamento-medio);
         padding: var(--espacamento-pequeno);
